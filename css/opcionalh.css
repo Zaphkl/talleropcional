@@ -1,0 +1,130 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+.caja {
+    background-color: rgb(255, 217, 0);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+.boton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: darkblue;
+}
+
+.pagina {
+    display: none;
+}
+
+.pagina.mostrar {
+    display: block;
+}
+
+.formulario {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.boton-guardar {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton-limpiar {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton-eliminar {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+
+th {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.mensaje {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bueno {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.malo {
+    background-color: pink;
+    color: darkred;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}

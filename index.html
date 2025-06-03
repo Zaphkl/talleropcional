@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de la Univerdsoidad</title>
+    <link rel="stylesheet" href="../talleropcional/css/opcionalh.css">
+    <script src="../talleropcional/js/opcional.js"></script>
+</head>
+
+<body>
+    <div class="caja">
+        <h1>Sistema de Gestión de la Universidad</h1>
+
+        <div style="text-align: center;">
+            <button class="boton" onclick="irA('inicio')">Inicio</button>
+            <button class="boton" onclick="irA('proyectos')">Proyectos</button>
+            <button class="boton" onclick="irA('programas')">Programas</button>
+        </div>
+
+        <div id="inicio" class="pagina mostrar">
+            <h2>¡Bienvenido!</h2>
+            <p>Este sistema te ayuda a manejar:</p>
+            <ul>
+                <li><strong>Proyectos de Grado:</strong> Registra y organiza los proyectos de los estudiantes</li>
+                <li><strong>Programas Académicos:</strong> Administra las carreras de la universidad</li>
+            </ul>
+            <p>Usa los botones de arriba para navegar</p>
+        </div>
+
+        <div id="proyectos" class="pagina">
+            <h2>Gestión de Proyectos de Grado</h2>
+
+            <div class="formulario">
+                <h3>Agregar Nuevo Proyecto</h3>
+                <form onsubmit="crearProyecto(event)">
+
+                    <label>Código del Proyecto:</label>
+                    <input type="text" id="codigo" placeholder="Ejemplo: PROJ001" required>
+                    <span class="error" id="errorCodigo"></span>
+
+                    <label>Título del Proyecto:</label>
+                    <input type="text" id="titulo" placeholder="Ejemplo: Sistema de Inventario" required>
+                    <span class="error" id="errorTitulo"></span>
+
+                    <label>¿En qué área es?</label>
+                    <select id="area" required>
+                        <option value="">Elige una opción</option>
+                        <option value="Tecnologia">Tecnología</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Educacion">Educación</option>
+                        <option value="MedioAmbiente">Medio Ambiente</option>
+                        <option value="Negocios">Negocios</option>
+                    </select>
+
+                    <label>¿Cómo va el proyecto?</label>
+                    <select id="estado" required>
+                        <option value="">Elige una opción</option>
+                        <option value="EnDesarrollo">Todavía trabajando</option>
+                        <option value="EnRevision">Revisando</option>
+                        <option value="Finalizado">Ya terminé</option>
+                        <option value="Cancelado">Se canceló</option>
+                    </select>
+
+                    <button type="submit" class="boton-guardar">Guardar Proyecto</button>
+                    <button type="button" class="boton-limpiar" onclick="borrarFormularioProyecto()">Limpiar</button>
+                </form>
+            </div>
+
+            <div id="mostrarProyectos"></div>
+        </div>
+
+        <div id="programas" class="pagina">
+            <h2>Gestión de Programas Académicos</h2>
+
+            <div class="formulario">
+                <h3>Agregar Nueva Carrera</h3>
+                <form onsubmit="crearPrograma(event)">
+
+                    <label>Código del Programa:</label>
+                    <input type="text" id="codigoCarrera" placeholder="Ejemplo: ING001" required>
+                    <span class="error" id="errorCodigoCarrera"></span>
+
+                    <label>Nombre de la Carrera:</label>
+                    <input type="text" id="nombreCarrera" placeholder="Ejemplo: Ingeniería de Sistemas" required>
+                    <span class="error" id="errorNombreCarrera"></span>
+
+                    <label>¿Cuántos semestres dura?</label>
+                    <input type="number" id="semestres" min="1" placeholder="Ejemplo: 10" required>
+
+                    <label>¿Cómo se estudia?</label>
+                    <select id="comoEstudia" required>
+                        <option value="">-- Elige una opción --</option>
+                        <option value="Presencial">Presencial (en la universidad)</option>
+                        <option value="Virtual">Virtual (desde casa)</option>
+                    </select>
+
+                    <button type="submit" class="boton-guardar">Guardar Programa</button>
+                    <button type="button" class="boton-limpiar" onclick="borrarFormularioPrograma()">Limpiar</button>
+                </form>
+            </div>
+
+            <div id="mostrarProgramas"></div>
+        </div>
+    </div>
+</body>
+
+</html>
